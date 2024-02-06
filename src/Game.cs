@@ -4,17 +4,17 @@
     {
         private string userInput ="";
         private readonly Actor player;
-        private readonly List<Room> rooms = [];
+        private readonly List<Room> rooms = new List<Room>();
 
         public Game()
         {
-            Room RedRoom  = new ("You are in the Red room.  \nInput 2 to go to the blue room. \n ");
-            Room BlueRoom = new ("You are in the Blue room. \nInput 1 to go to the red room.  \n ");
+            Room redRoom = new ("You are in the Red room. \nInput 2 to go to the blue room. \n");
+            Room blueRoom = new ("You are in the Blue room. \nInput 1 to go to the red room.  \n ");
 
-            rooms.Add(RedRoom);
-            rooms.Add(BlueRoom);
+            rooms.Add(redRoom);
+            rooms.Add(blueRoom);
 
-            player = new Actor(RedRoom);
+            player = new Actor(redRoom);
         }
 
         public void Run()
