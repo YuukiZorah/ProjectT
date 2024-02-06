@@ -1,19 +1,17 @@
 ﻿namespace ProjectT
 {
-    internal class Room
+    internal class Room(string roomText)
     {
-        string RoomText = "";
-
-        public Room(string roomText)
-        {
-            RoomText = roomText;
-        }
+        private readonly string RoomText = roomText;
 
         public void DisplayRoomText()
         {
             Utility.DisplayText(RoomText);
         }
-
         
+        public string GetRoomText()
+        {
+            return RoomText;
+        }
     }
 }
